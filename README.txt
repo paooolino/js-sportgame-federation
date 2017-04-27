@@ -10,6 +10,10 @@ Given any number of teams, each having a "level right"
 		- the promotion nr for the higher level is always 1 and is called "champion".
 		- the promotion nr for the lower levels equals the relegation nr for the immediatly higher level.
 3. subdivide each level in leagues.
+teams	max_t	n_leagues
+1			10		1
+10					1
+11					2
 4. set playoffs/playout rules for each level.
 
 conf:
