@@ -1,7 +1,10 @@
 var Federation = function() {
 	// has a way to set the team data.
 	var teamData = [];
+	
 	/**
+	 * Set the list of teams belonging to the federation.
+	 *
 	 * @param _teamData array {name:string, level:number}
 	 */
 	this.setTeamData = function(_teamData) {
@@ -13,7 +16,14 @@ var Federation = function() {
 	
 	// has a way to set a new season
 	/**
-	 * @param opts
+	 * Create levels and leagues using the team data previously set.
+	 *
+	 * @param opts Object
+	 *	MAX_TEAMS_PER_LEAGUE
+	 *
+	 * @return season Object
+	 *	levelsComposition Array
+	 *	leagues Array
 	 */
 	this.createNewSeason = function(opts) {
 		function subdivideTeamsInLevels(teamData) {

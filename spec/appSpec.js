@@ -12,12 +12,20 @@ var teamData = [{
 }];
 
 describe("Federation", function() {
+	
+	/**
+	 * @uses Federation.setTeamData
+	 */
 	it('has a way to set the team data', function() {	
 		var fed = new Federation();
 		fed.setTeamData(teamData);
 		expect(fed.getTeamData().length).toBe(3);
 	});
-	
+
+	/**
+	 * @uses Federation.setTeamData
+	 * @uses Federation.createNewSeason
+	 */	
 	it('subdivides teams in levels', function() {
 		var fed = new Federation();
 		fed.setTeamData(teamData);
@@ -27,7 +35,11 @@ describe("Federation", function() {
 		expect(season.levelsComposition[0].length).toBe(2);
 		expect(season.levelsComposition[1].length).toBe(1);
 	});
-	
+
+	/**
+	 * @uses Federation.setTeamData
+	 * @uses Federation.createNewSeason
+	 */		
 	it('creates leagues for each level', function() {
 		var fed = new Federation();
 		fed.setTeamData(teamData);
